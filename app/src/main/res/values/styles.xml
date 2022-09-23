@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+
+        <item name="colorSecondary">@color/secondaryColor</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:textViewStyle">@style/AppTheme.TextView</item>
+        <item name="android:textAppearance">@style/AppTheme.TextAppearance</item>
+        <item name="materialButtonStyle">@style/AppTheme.Button</item>
+        <item name="checkboxStyle">@style/AppTheme.Widget.CheckBox</item>
+    </style>
+
+    <style name="AppTheme.TextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="AppTheme.Widget.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="materialThemeOverlay">@style/AppTheme.Overlay.CheckBox</item>
+    </style>
+
+    <style name="AppTheme.Overlay.CheckBox" parent="">
+        <item name="colorOnSurface">@color/primaryColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+    </style>
+
+    <style name="AppTheme.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/primaryColor</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+
+    </style>
+
+    <style name="AppTheme.OutlineButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+
+    </style>
+
+
+    <style name="AppTheme.ProgressBarThemeHorizontal" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:indeterminateTint">@color/loading_pb</item>
+        <item name="android:indeterminateTintMode">src_atop</item>
+    </style>
+
+    <style name="AppTheme.ProgressBarTheme" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@color/loading_pb</item>
+        <item name="android:indeterminateTintMode">src_atop</item>
+    </style>
+
+    <style name="AppTheme.AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+
+    </style>
+
+</resources>

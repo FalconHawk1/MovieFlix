@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- region Remote Errors -->
+    <integer name="error_remote_default_code">0</integer>
+    <string name="error_remote_default_desc">Problemas de conexión a internet, por favor intente nuevamente.</string>
+
+    <integer name="error_remote_timeout">1</integer>
+    <string name="error_remote_timeout">No hay conexión con el servidor. Verifique su conexión a internet e intente nuevamente.</string>
+
+    <integer name="error_remote_unhost">2</integer>
+    <string name="error_remote_unhost">No hay conexión con el servidor. Verifique su conexión a internet e intente nuevamente.</string>
+    <!-- endregion -->
+
+    <integer name="error_ui_default">0</integer>
+    <string name="error_ui_default">Ocurrió un error, por favor intente nuevamente.</string>
+
+    <integer name="error_login_noUser">0</integer>
+    <string name="error_login_noUser">El campo Usuario no puede estar vacío</string>
+
+    <integer name="error_login_noPass">0</integer>
+    <string name="error_login_noPass">El campo Contraseña no puede estar vacío</string>
+
+    <integer name="error_login_noUserNoPass">0</integer>
+    <string name="error_login_noUserNoPass">Los campos Usuario y Contraseña no pueden estar vacíos</string>
+
+</resources>

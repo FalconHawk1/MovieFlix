@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyTestApp</string>
+
+    <!-- region Login -->
+    <string name="login_userHint">Usuario</string>
+    <string name="login_passHint">Contraseña</string>
+    <string name="login_loginBtn">Iniciar sesión</string>
+    <string name="login_forgotBtn"><u>¿Olvidaste tu contraseña?</u></string>
+    <!-- endregion -->
+
+    <!-- region Util -->
+    <string name="util_loading">Cargando…</string>
+    <!-- endregion -->
+</resources>
