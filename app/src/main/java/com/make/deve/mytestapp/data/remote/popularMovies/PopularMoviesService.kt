@@ -5,13 +5,13 @@ import com.make.deve.mytestapp.data.remote.util.BaseRetrofitService
 import org.json.JSONArray
 import org.json.JSONObject
 
-class CompanyService: BaseRetrofitService(),ICompanyService {
+class PopularMoviesService: BaseRetrofitService(),IPopularMoviesService {
 
     val apiKey = "f5ca92d82c4ef81bad43458d6fdbbe5a"
 
 
-    override val contract: CompanyContract
-        get() = build(CompanyContract::class.java)
+    override val contract: PopularMoviesContract
+        get() = build(PopularMoviesContract::class.java)
 
     override suspend fun getData(): GetDataResponseModel {
         var res = GetDataResponseModel()

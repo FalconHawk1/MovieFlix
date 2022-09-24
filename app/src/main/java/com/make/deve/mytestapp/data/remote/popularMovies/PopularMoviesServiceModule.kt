@@ -4,9 +4,9 @@ import com.make.deve.mytestapp.di.BaseModule
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
-object CompanyServiceModule: BaseModule() {
+object PopularMoviesServiceModule: BaseModule() {
     private val mod: Module = module {
-        single<ICompanyService> { CompanyService() }
+        single<IPopularMoviesService> { PopularMoviesService() }
     }
 
     override val modules: List<Module>

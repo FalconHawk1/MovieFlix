@@ -19,28 +19,27 @@
 
         <!-- Nested layouts to add corner radius just to top -->
         <FrameLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topView">
+            app:layout_constraintStart_toStartOf="parent">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="0dp"
                 app:cardCornerRadius="0dp">
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:paddingBottom="0dp">
 
                     <fragment
                         android:id="@+id/nav_host_fragment"
                         android:name="androidx.navigation.fragment.NavHostFragment"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         app:defaultNavHost="true"
                         app:navGraph="@navigation/nav_graph" />

@@ -1,17 +1,17 @@
-package com.make.deve.mytestapp.ui.company
+package com.make.deve.mytestapp.ui.popularMovies
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.make.deve.mytestapp.data.repo.popularMovies.ICompanyRepo
+import com.make.deve.mytestapp.data.repo.popularMovies.IPopularMoviesRepo
 import com.make.deve.mytestapp.ui.util.BaseViewModel
 import kotlinx.coroutines.launch
 import org.koin.core.KoinComponent
 import org.koin.core.inject
 
-class CompanyViewModel: BaseViewModel(), KoinComponent {
+class HomeViewModel: BaseViewModel(), KoinComponent {
 
-    val repo: ICompanyRepo by inject()
-    val listofCompany: MutableLiveData<GetDataCompanyResponseModel> = MutableLiveData()
+    val repo: IPopularMoviesRepo by inject()
+    val listofPopularMovies: MutableLiveData<GetDataPopularMoviesResponseModel> = MutableLiveData()
 
     fun getCompanyUser() {
         viewModelScope.launch {
@@ -19,7 +19,7 @@ class CompanyViewModel: BaseViewModel(), KoinComponent {
 
 
             val rem = repo.getDataCompany()
-            listofCompany.value = rem
+            listofPopularMovies.value = rem
 
             loading.value = false
         }

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_start"
-        android:name="com.make.deve.mytestapp.ui.company.CompanyFragment"
-        tools:layout="@layout/fragment_company" />
+        android:name="com.make.deve.mytestapp.ui.popularMovies.HomeFragment"
+        tools:layout="@layout/fragment_home" />
 
 </navigation>

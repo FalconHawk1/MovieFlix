@@ -1,8 +1,8 @@
-package com.make.deve.mytestapp.ui.company
+package com.make.deve.mytestapp.ui.popularMovies
 
 import com.make.deve.mytestapp.ui.util.BaseUIData
 
-data class GetDataCompanyResponseModel(
+data class GetDataPopularMoviesResponseModel(
     val items: List<CompanyItem> = listOf()
 ): BaseUIData()
 

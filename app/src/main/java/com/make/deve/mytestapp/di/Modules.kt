@@ -1,8 +1,8 @@
 package com.make.deve.mytestapp.di
 
-import com.make.deve.mytestapp.data.remote.popularMovies.CompanyServiceModule
+import com.make.deve.mytestapp.data.remote.popularMovies.PopularMoviesServiceModule
 import com.make.deve.mytestapp.data.remote.util.RemoteModule
-import com.make.deve.mytestapp.data.repo.popularMovies.CompanyRepoModule
+import com.make.deve.mytestapp.data.repo.popularMovies.PopularMoviesRepoModule
 import com.make.deve.mytestapp.data.repo.repo.RepoModule
 import com.make.deve.mytestapp.ui.main.MainModule
 import org.koin.core.module.Module
@@ -17,11 +17,11 @@ object Modules {
         //endregion
 
         //region Service Modules
-        allModules.addAll(CompanyServiceModule)
+        allModules.addAll(PopularMoviesServiceModule)
         //endregion
 
         //region Repo Modules
-        allModules.addAll(CompanyRepoModule)
+        allModules.addAll(PopularMoviesRepoModule)
         //endregion
 
         //region UI Modules

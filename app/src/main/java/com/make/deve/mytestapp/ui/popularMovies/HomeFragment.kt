@@ -1,40 +1,37 @@
-package com.make.deve.mytestapp.ui.company
+package com.make.deve.mytestapp.ui.popularMovies
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.navigation.navGraphViewModels
-import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.make.deve.mytestapp.R
-import com.make.deve.mytestapp.databinding.FragmentCompanyBinding
-import com.make.deve.mytestapp.databinding.ItemCompanyBinding
+import com.make.deve.mytestapp.databinding.FragmentHomeBinding
+import com.make.deve.mytestapp.databinding.ItemHomeBinding
 import com.make.deve.mytestapp.ui.base.BaseFragment
 import me.ibrahimyilmaz.kiel.adapterOf
 import me.ibrahimyilmaz.kiel.core.RecyclerViewHolder
 
-class CompanyFragment:BaseFragment() {
+class HomeFragment:BaseFragment() {
     override val showTitle: Boolean
         get() = false
 
-    lateinit var binding: FragmentCompanyBinding
-    val vm:CompanyViewModel by viewModels()
+    lateinit var binding: FragmentHomeBinding
+    val vm:HomeViewModel by viewModels()
 
 
     private val adapter = adapterOf<CompanyItem> {
         register(
             viewHolder = ::ViewHolder,
-            layoutResource = R.layout.item_company,
+            layoutResource = R.layout.item_home,
             onBindViewHolder = { vh, pos, item ->
                 vh.bind(item, pos)
             })
     }
 
     inner class ViewHolder(view: View) : RecyclerViewHolder<CompanyItem>(view) {
-        val binding: ItemCompanyBinding = ItemCompanyBinding.bind(view)
+        val binding: ItemHomeBinding = ItemHomeBinding.bind(view)
         var item = CompanyItem()
 
         init {
@@ -44,10 +41,7 @@ class CompanyFragment:BaseFragment() {
         fun bind(item: CompanyItem, position: Int) {
             this.item = item
             binding.run {
-                name.text = item.title
-                address.text = item.overview
-
-                Glide.with(requireContext()).load(item.poster_path)
+                Glide.with(requireContext()).load("https://image.tmdb.org/t/p/w500/"+item.poster_path)
                     .error(R.drawable.ic_baseline_cancel_24)
                     .into(binding.imglogo)
 
@@ -60,7 +54,7 @@ class CompanyFragment:BaseFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentCompanyBinding.inflate(inflater, container, false)
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
         binding.items.adapter = adapter
 
         binding.swipe.setOnRefreshListener {
@@ -68,7 +62,7 @@ class CompanyFragment:BaseFragment() {
         }
 
         observeLoading(vm.loading)
-        vm.listofCompany.observe(viewLifecycleOwner) {
+        vm.listofPopularMovies.observe(viewLifecycleOwner) {
             it?.let {
                 if (it.error == null) {
                     adapter.submitList(it.items)
